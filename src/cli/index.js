@@ -123,7 +123,6 @@ async function runTests (argParser) {
     }
 
     finally {
-        showMessageOnExit = false;
         await testCafe.close();
     }
 
@@ -182,7 +181,6 @@ function useLocalInstallation () {
             await runTests(argParser);
     }
     catch (err) {
-        showMessageOnExit = false;
         error(err);
     }
 })();
